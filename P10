@@ -1,0 +1,3 @@
+/*(10).Write a java program to create an interface named Shape that contains methods named area() and perimeter(). Provide three classes named Rectangle, Triangle and Circle such that each one of the classes 
+implements the interface Shape. Each one of the classes contains all possible constructor(s) and overridden method area() and perimeter() that calculate and return area and perimeter of the given shape.*/
+
