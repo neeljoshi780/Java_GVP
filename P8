@@ -1,0 +1,13 @@
+/*(8).Write a program to implement Matrix and inverse, transpose, additions, subtraction, multiplications, and other relevant operations. Define a class ‘Matrix' with
+1) private variables for storing a Matrix (2-dimensional double type array)
+2) private variables for storing no. of rows and no. of columns
+3) Constructors for initializing member variables and for allocating the 2D array (Note:-implement all possible constructors)
+4) Methods to transpose Matrix
+5) Methods to add 2 matrices and return the result Matrix object :public Matrix add(Matrix m1) and public Matrix addition(Matrix m1, Matrix m2)
+6) Method to subtract 2 matrices and return the result Matrix object : public Matrix sub(Matrix m1) and public Matrix subtraction(Matrix m1, Matrix m2)
+7) Method to multiply 2 matrices and return the result Matrix object : public Matrix mul(Matrix m1) and public Matrix multiplication(Matrix m1, Matrix m2)
+8) Override toString() method to print the Matrix row-by-row: public String toString()
+9) Define one more class with 'main()' function. Define 2 objects m1 and m2 of class Matrix in main(). Get the no. of rows, columns, and values for both the matrices from the user and initialize them by calling
+the constructor. Perform all operations (inverse,transpose etc.). Also perform addition, subtraction, and multiplication operations on matrices m1 and m2. (You can define additional Matrix objects to hold the
+results of these operations). Finally, print the result Matrix using the toString() method.*/
+
