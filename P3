@@ -1,18 +1,8 @@
-/*(3).Create a class “Utility” with following methods :
-1) public static long factorial (long value)
-above method returns long
-2) public static boolean isPrime(int value)
-The above method returns true if the given number is prime, otherwise false.
-3) public static boolean isEven(long value)
-The above method returns true if the given number is even, otherwise false.
-4) public static boolean isOdd(long value)
-The above method returns true if the given number is odd, otherwise false.*/
-
 import java.util.Scanner;
 
 class Utility {
 
-    //Factorial Value Find
+    // Factorial Value Find
     static long fact = 1;
 
     public static long factorial(long value) {
@@ -22,7 +12,7 @@ class Utility {
         return fact;
     }
 
-    //Is Prime Number Check
+    // Is Prime Number Check
     public static boolean isPrime(int p) {
         for (int i = 2; i < p; i++) {
             if (p % i == 0) {
@@ -32,7 +22,7 @@ class Utility {
         return true;
     }
 
-    //Is Even Number Check
+    // Is Even Number Check
     public static boolean isEven(long num) {
         if (num % 2 == 0) {
             return true;
@@ -40,7 +30,7 @@ class Utility {
         return false;
     }
 
-    //Is Odd Number Check
+    // Is Odd Number Check
     public static boolean isOdd(long num) {
         if (num % 2 != 0) {
             return true;
@@ -53,7 +43,7 @@ public class P3 {
 
     public static void main(String[] args) {
 
-        //Factorial find
+        // Factorial find
         long f;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter in Fact find Number:=");
@@ -61,7 +51,7 @@ public class P3 {
         long fact = Utility.factorial(f);
         System.out.println(f + " Factorial Value Is = " + fact);
 
-        //Prime Check
+        // Prime Check
         int nump;
         System.out.print("Check Prime Number:=");
         nump = sc.nextInt();
@@ -72,7 +62,7 @@ public class P3 {
             System.out.println(nump + " is Not Prime Number.!!");
         }
 
-        //Even Check
+        // Even Check
         long nume;
         System.out.print("Check Number is Even:=");
         nume = sc.nextLong();
@@ -83,7 +73,7 @@ public class P3 {
             System.out.println(nume + " is Not Even.!!");
         }
 
-        //Odd Check
+        // Odd Check
         long numo;
         System.out.print("Check Number is Odd:=");
         numo = sc.nextLong();
@@ -92,6 +82,10 @@ public class P3 {
             System.out.println(numo + " is Odd.");
         } else {
             System.out.println(numo + " is Not Odd.!!");
+        }
+
+        if (sc != null) {
+            sc.close();
         }
     }
 }
