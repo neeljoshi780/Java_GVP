@@ -1,85 +1,85 @@
-/*(9).Write a java program to create an abstract class named Shape that contains two integers and abstract methods named area() and perimeter(). Provide three classes named Rectangle, Triangle and Circle such 
-that each one of the classes extends the class Shape. Each one of the classes contains all possible constructor(s) and overridden methods
-1) public double area() that calculate and return area of the given shape. And
-2) public double perimeter() that calculates and returns circumference/perimeter of the given shape.*/
-
 abstract class Shape {
+    int dimension1, dimension2;
 
-    protected double dimension1;
-    protected double dimension2;
-
-    public Shape(double dimension1, double dimension2) {
+    Shape(int dimension1, int dimension2) {
         this.dimension1 = dimension1;
         this.dimension2 = dimension2;
     }
 
     public abstract double area();
-    public abstract double perimeter();
 
+    public abstract double perimeter();
 }
 
 class Rectangle extends Shape {
-
-    public Rectangle(double length, double width) {
+    Rectangle(int length, int width) {
         super(length, width);
     }
 
+    @Override
     public double area() {
         return dimension1 * dimension2;
     }
 
+    @Override
     public double perimeter() {
         return 2 * (dimension1 + dimension2);
     }
 }
 
 class Triangle extends Shape {
+    private double side1, side2, side3;
 
-    private double side3;
-
-    public Triangle(double base, double height, double side3) {
+    Triangle(int base, int height, double side1, double side2, double side3) {
         super(base, height);
+        this.side1 = side1;
+        this.side2 = side2;
         this.side3 = side3;
     }
 
+    @Override
     public double area() {
         return 0.5 * dimension1 * dimension2;
     }
 
+    @Override
     public double perimeter() {
-        return dimension1 + dimension2 + side3;
+        return side1 + side2 + side3;
     }
 }
 
-class Circle extends Shape {
+class Circle_ extends Shape {
+    private final double radius;
 
-    public Circle(double radius) {
+    Circle_(int radius) {
         super(radius, 0);
+        this.radius = radius;
     }
 
+    @Override
     public double area() {
-        return Math.PI * dimension1 * dimension1;
+        return Math.PI * radius * radius;
     }
 
+    @Override
     public double perimeter() {
-        return 2 * Math.PI * dimension1;
+        return 2 * Math.PI * radius;
     }
 }
 
 public class P9 {
 
     public static void main(String[] args) {
-        Rectangle r = new Rectangle(5, 3);
-        Triangle t = new Triangle(4, 6, 5);
-        Circle c = new Circle(7);
+        Rectangle r1 = new Rectangle(10, 5);
+        System.out.println("Rectangle Area: " + r1.area());
+        System.out.println("Rectangle Perimeter: " + r1.perimeter());
 
-        System.out.println("Rectangle Area:=" + r.area());
-        System.out.println("Rectangle Perimeter:=" + r.perimeter());
+        Triangle t1 = new Triangle(5, 12, 5, 12, 13);
+        System.out.println("Triangle Area: " + t1.area());
+        System.out.println("Triangle Perimeter: " + t1.perimeter());
 
-        System.out.println("Triangle Area:=" + t.area());
-        System.out.println("Triangle Perimeter:=" + t.perimeter());
-
-        System.out.println("Circle Area:=" + c.area());
-        System.out.println("Circle Perimeter:=" + c.perimeter());
+        Circle_ c1 = new Circle_(7);
+        System.out.println("Circle Area: " + c1.area());
+        System.out.println("Circle Perimeter: " + c1.perimeter());
     }
 }
