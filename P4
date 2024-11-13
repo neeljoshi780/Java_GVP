@@ -1,18 +1,8 @@
-/*(4).Create class Number with only one private instance variable as a double
-primitive type. To include the following methods (include respective
-constructors) isZero(), isPositive(), isNegative( ), isOdd( ), isEven( ), the above
-methods return boolean type and getFactorial(), the above method returns
-double type.*/
-
 import java.util.Scanner;
 
 class Number {
 
     private static double num;
-
-    public Number() {
-        Number.num = 5;
-    }
 
     public Number(double num) {
         Number.num = num;
@@ -67,7 +57,7 @@ public class P4 {
         System.out.print("Enter Any Number:=");
         num = sc.nextDouble();
 
-        Number n1 = new Number(num);
+        Number n1=new Number(num);
 
         //Zero Check
         boolean z = Number.isZero();
@@ -112,5 +102,10 @@ public class P4 {
         //factorial value
         double fact = Number.getFactorial();
         System.out.println(num + " Factorial Value is " + fact);
+
+        if(sc!=null)
+        {
+            sc.close();
+        }
     }
 }
