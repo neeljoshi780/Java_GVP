@@ -1,0 +1,48 @@
+// oddThread Class extends Thread Class
+class OddThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 100; i += 2) {
+            System.out.println("OddThread: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.err.println("OddThread interrupted: " + e.getMessage());
+            }
+        }
+    }
+}
+
+// PrimeThread class implemetns Runnable Interface
+class PrimeThread implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            boolean temp = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    temp = false;
+                }
+            }
+            if (temp) {
+                System.out.println("PrimeThread: " + i);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    System.err.println("PrimeThread interrupted: "+e.getMessage());
+                }
+            }
+        }
+    }
+}
+
+public class P13 {
+    public static void main(String[] args) {
+        OddThread ot = new OddThread();
+        PrimeThread pt=new PrimeThread();
+        Thread td=new Thread(pt);
+
+        ot.start();
+        td.start();
+    }
+}
