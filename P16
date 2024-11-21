@@ -20,9 +20,8 @@ public class P16 {
         Stack_DS s1 = new Stack_DS();
         System.out.println("1 Push");
         System.out.println("2 Pop");
-        System.out.println("3 Peek");
-        System.out.println("4 Traverse");
-        System.out.println("5 Exit");
+        System.out.println("3 Traverse");
+        System.out.println("4 Exit");
         Outerloop:
         while (true) {
             int c, value, pvalue;
@@ -43,12 +42,9 @@ public class P16 {
                     }
                     break;
                 case 3:
-                    s1.peek();
-                    break;
-                case 4:
                     s1.traverse();
                     break;
-                case 5:
+                case 4:
                     break Outerloop;
                 default:
                     System.out.println("Pls Enter Valid Choice.!!");
