@@ -38,13 +38,9 @@ public class P14 {
             FileInputStream fis = new FileInputStream(sourceFile);
             FileOutputStream fos=new FileOutputStream(destinationFile);
 
-            byte[] data=new byte[1024];
             int bytesRead;
             while((bytesRead=fis.read())!=-1){
-                int i=0;
-                byte temp=(byte)bytesRead;
-                fos.write(data[i]=temp);
-                i++;
+                fos.write(bytesRead);
             }
             fis.close();
             fos.close();
@@ -61,12 +57,9 @@ public class P14 {
             FileWriter fw=new FileWriter(destinationFile);
             BufferedWriter bw=new BufferedWriter(fw);
 
-            String line[]=new String[50];
             String data;
             while((data=br.readLine())!=null){
-                int i=0;
-                bw.write(line[i]=data);
-                i++;
+                bw.write(data);
             }
 
             br.close();
