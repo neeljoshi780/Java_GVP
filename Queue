@@ -45,16 +45,6 @@ public class Queue_DS {
         }
     }
 
-    // Peek Method
-    public void peek(){
-        if(front==-1){
-            System.out.println("Queue is Empty.!!");
-        }
-        else{
-            System.out.println("Queue Peek Value is:= "+queue[front]);
-        }
-    }
-
     // Display Method
     public void display(){
         if(front==-1){
