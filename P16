@@ -23,7 +23,7 @@ public class P16 {
         System.out.println("3 Peek");
         System.out.println("4 Traverse");
         System.out.println("5 Exit");
-
+        Outerloop:
         while (true) {
             int c, value, pvalue;
             System.out.print("Select the Choice:=");
@@ -49,45 +49,44 @@ public class P16 {
                     s1.traverse();
                     break;
                 case 5:
-                    System.exit(0);
-                    break;
+                    break Outerloop;
                 default:
                     System.out.println("Pls Enter Valid Choice.!!");
             }
         }
         // Queue Class
-        // Queue_DS q1 = new Queue_DS();
-        // System.out.println("1 Enqueue");
-        // System.out.println("2 Dequeue");
-        // System.out.println("3 Peek");
-        // System.out.println("4 Display");
-        // System.out.println("4 Exit");
+        Queue_DS q1 = new Queue_DS();
+        System.out.println("1 Enqueue");
+        System.out.println("2 Dequeue");
+        System.out.println("3 Peek");
+        System.out.println("4 Display");
+        System.out.println("4 Exit");
 
-        // while (true) {
-        // int c, value, dvalue;
-        // System.out.print("Select the Choice:=");
-        // c = sc.nextInt();
+        while (true) {
+        int c, value, dvalue;
+        System.out.print("Select the Choice:=");
+        c = sc.nextInt();
 
-        // switch (c) {
-        // case 1:
-        // System.out.print("Enter the Value:=");
-        // value = sc.nextInt();
-        // q1.enqueue(value);
-        // break;
-        // case 2:
-        // q1.dequeue();
-        // break;
-        // case 3:
-        // q1.peek();
-        // break;
-        // case 4:
-        // q1.display();
-        // break;
-        // case 5:
-        // System.exit(0);
-        // default:
-        // System.out.println("Pls Enter Valid Choice.!!");
-        // }
-        // }
+        switch (c) {
+        case 1:
+        System.out.print("Enter the Value:=");
+        value = sc.nextInt();
+        q1.enqueue(value);
+        break;
+        case 2:
+        q1.dequeue();
+        break;
+        case 3:
+        q1.peek();
+        break;
+        case 4:
+        q1.display();
+        break;
+        case 5:
+        System.exit(0);
+        default:
+        System.out.println("Pls Enter Valid Choice.!!");
+        }
+        }
     }
 }
